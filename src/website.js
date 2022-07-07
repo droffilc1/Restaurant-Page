@@ -1,17 +1,19 @@
-import loadHome from "./home";
-import loadMenu from "./menu";
-import loadContact from "./contact";
+import loadHome from './home';
+import loadMenu from './menu';
+import loadContact from './contact';
 
 function createHeader() {
   const header = document.createElement('header');
   header.classList.add('header');
 
-  const logo = document.createElement('h1');
-  logo.classList.add('logo');
-  logo.textContent = 'Chocolate';
+  const restaurantName = document.createElement('h1');
+  restaurantName.classList.add('logo');
+  restaurantName.textContent = 'Chocolate';
 
-  header.appendChild(logo);
-  header.appendChild(createNav)
+  header.appendChild(restaurantName);
+  header.appendChild(createNav());
+
+  return header;
 }
 
 
@@ -20,6 +22,7 @@ function createNav() {
 
   const homeBtn = document.createElement('button');
   homeBtn.classList.add('button-nav');
+  homeBtn.textContent = 'Home';
   homeBtn.addEventListener('click', (e) => {
     if(e.target.classList.contains('active')) return;
     setActiveBtn(homeBtn);
@@ -64,9 +67,9 @@ function setActiveButton(button) {
 }
 
 function createMain() {
-  const main = document.createElement("main");
-  main.classList.add("main");
-  main.setAttribute("id", "main");
+  const main = document.createElement('main');
+  main.classList.add('main');
+  main.setAttribute('id', 'main');
   return main;
 }
 

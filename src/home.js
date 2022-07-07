@@ -1,6 +1,6 @@
 function createHome() {
   const home = document.createElement('div');
-  home.classList('home');
+  home.classList.add('home');
 
   const centerDiv = document.createElement('h3');
   centerDiv.textContent = 'The Authentic Chocolate Experience';
